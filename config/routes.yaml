@@ -1,0 +1,3 @@
+smug_contact_bundle.routes:
+  type: annotation
+  resource: '../src/Controller'

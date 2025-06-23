@@ -1,0 +1,47 @@
+<div style="font-family:arial; font-size:12px; background: #ffffff; color: #111317;">
+    {% mjml %}
+        <mjml>
+            <mj-body>
+                {% block header %}
+                    {{ include('@systemEmail/_global/html/header.html.twig') }}
+                {% endblock %}
+
+                <mj-section>
+                    <mj-column width="600px">
+                        <mj-text color="#111317" font-size="13px" font-weight="bold" font-family="helvetica">
+                            Hallo,
+                        </mj-text>
+                    </mj-column>
+                </mj-section>
+
+                <mj-section>
+                    <mj-column width="600px">
+                        <mj-text color="#111317" font-size="13px" font-family="helvetica">
+                            zu einer Kooperationsanfrage ist eine neue Nachricht eingegangen.
+                        </mj-text>
+                    </mj-column>
+                </mj-section>
+
+                <mj-section>
+                    <mj-column>
+                        <mj-text font-size="13px" font-family="helvetica">
+                            {{ data.message | raw }}
+                        </mj-text>
+                    </mj-column>
+                </mj-section>
+
+                <mj-section>
+                    <mj-column>
+                        <mj-button background-color="#E4545A" color="#ffffff" href="https://admin.storysh.de/#/cooperation/edit/{{ data.id }}">
+                            Zu der Anfrage
+                        </mj-button>
+                    </mj-column>
+                </mj-section>
+
+                {% block footer %}
+                    {{ include('@systemEmail/_global/html/footer.html.twig') }}
+                {% endblock %}
+            </mj-body>
+        </mjml>
+    {% endmjml %}
+</div>

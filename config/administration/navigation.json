@@ -1,0 +1,58 @@
+{
+    "contacts": {
+        "label": "CONTACT",
+        "zone": "contact",
+        "key": "contacts",
+        "parent": "apps",
+        "path": "",
+        "icon": "",
+        "position": 0,
+        "type": 1,
+        "children": []
+    },
+    "contact": {
+        "label": "CONTACT_REQUESTS",
+        "class": "Smug\\ContactBundle\\Entity\\Contact\\Contact",
+        "key": "contact",
+        "parent": "contacts",
+        "icon": "",
+        "path": "smug/contact/contact/list",
+        "position": 0,
+        "type": 2,
+        "children": []
+    },
+    "cooperations": {
+        "label": "COOPERATIONS",
+        "zone": "cooperation",
+        "key": "cooperations",
+        "parent": "apps",
+        "icon": "",
+        "path": "",
+        "position": 0,
+        "type": 1,
+        "children": []
+    },
+    "cooperation": {
+        "label": "COOPERATION_REQUETSTS",
+        "class": "Smug\\ContactBundle\\Entity\\Cooperation\\Cooperation",
+        "key": "cooperation",
+        "parent": "cooperations",
+        "icon": "",
+        "path": "smug/contact/cooperation/list",
+        "position": 0,
+        "type": 2,
+        "children": []
+    },
+    "cooperationPartner": {
+        "label": "COOPERATION_PARTNERS",
+        "class": "Smug\\ContactBundle\\Entity\\CooperationPartner\\CooperationPartner",
+        "key": "cooperationPartners",
+        "parent": "cooperations",
+        "icon": "",
+        "path": "smug/contact/cooperation_partner/list",
+        "position": 0,
+        "type": 2,
+        "children": []
+    }
+}
+  

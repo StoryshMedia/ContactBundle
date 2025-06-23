@@ -1,0 +1,31 @@
+<div class="grid mx-auto grid-cols-12 lg:gap-12 xl:gap-24 relative z-10 items-start {% if additionalClasses is defined %}{{ additionalClasses }}{% endif %}">
+    <div class="col-span-12 h-72 md:h-full lg:h-72 xl:h-100 mb-8 lg:mb-0 md:col-span-6 flex items-center order-last lg:order-last">
+        {% if image.value is defined and image.value is not empty %}
+            {% set imageValue = getImage(image.value) %}
+            <img
+                {% if id is defined %} {{ adminConfig(_context, 'image', id) }} {% endif %}
+                class="w-full h-full"
+                srcset="{{ imageValue.desktop.list.src }} 480w, {{ imageValue.desktop.detail.src }} 800w"
+                sizes="(max-width: 600px) 480px,
+                        800px"
+                src="{{ imageValue.desktop.detail.src }}"
+                alt="{{ imageValue.desktop.detail.file }}" />
+        {% else %}
+            <img
+                {% if id is defined %} {{ adminConfig(_context, 'image', id) }} {% endif %}
+                class="w-full h-full" />
+        {% endif %}
+    </div>
+    <article
+        class="post-card p-4 lg:p-8 md:text-left shadow-lg col-span-12 md:col-span-6 order-first lg:order-first bg-white text-dark overlap--tile left--tile min-h-24 z-20"
+    >
+        <h4 class="{{ headline.classes }}" {% if id is defined %} {{ adminConfig(_context, 'headline', id) }} {% endif %}>
+            {{ headline.value }}
+        </h4>
+        <p class="{{ caption.classes }}" {% if id is defined %} {{ adminConfig(_context, 'caption', id) }} {% endif %}>
+            {{ caption.value | raw }}
+        </p>
+        <div id="simple-contact-form-{% if id is defined %}{{ id }}{% endif %}" data-props="{{ pluginSettingsJson }}" {% if id is defined %}class="administration--plugin-overlay"{% endif %}></div>
+        {{ smug_encore_entry_script_tags('simpleContactForm', null, '_default', [], true) }}
+    </article>
+</div>

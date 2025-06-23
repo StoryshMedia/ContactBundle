@@ -1,0 +1,16 @@
+{
+  "MESSAGES": "Nachrichten",
+  "CONTACT_USER": "User kontaktieren",
+  "NO_CONTACT_AVAILABILITY": "Kontakt nicht möglich",
+  "GENRE_LIST_FORM_HEADLINE": "Gibt es etwas zu ergänzen?",
+  "GENRE_LIST_FORM_TEXT": "Dir ist ein Fehler aufgefallen, oder hast einen Verbesserungswunsch? Fehlt Dir etwas oder hast Du eine andere Frage? Dann melde Dich einfach bei uns und wir werden uns darum kümmern.",
+  "AUTHOR_CONTACT_CONFIRMATION_TEXT": "<p>Wir haben Deine Nachricht an den Autor geschickt.</p><p>In dieser Mail ist auch Deine E-Mail Adresse hinterlegt, so dass er Dir bei Bedarf antworten kann.</p>",
+  "LAST_NAME": "Nachname",
+  "COMMUNITY_USERS": "Community User",
+  "FIRST_NAME": "Vorname",
+  "EMAIL": "E-Mail",
+  "SEND_FORM": "Abschicken",
+  "ABORT": "Abbrechen",
+  "CLOSE": "Schließen",
+  "TEXT": "Text"
+}

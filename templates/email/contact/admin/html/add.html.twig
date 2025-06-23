@@ -1,0 +1,23 @@
+<div style="font-family:arial; font-size:12px; background: #ffffff; color: #111317;">
+    {% mjml %}
+        <mjml>
+            <mj-body>
+                {% block header %}
+                    {{ include('@systemEmail/_global/html/header.html.twig') }}
+                {% endblock %}
+
+                <mj-section>
+                    <mj-column>
+                        <mj-text font-size="13px" font-family="helvetica">
+                            {{ data.message | raw }}
+                        </mj-text>
+                    </mj-column>
+                </mj-section>
+
+                {% block footer %}
+                    {{ include('@systemEmail/_global/html/footer.html.twig') }}
+                {% endblock %}
+            </mj-body>
+        </mjml>
+    {% endmjml %}
+</div>

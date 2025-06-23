@@ -1,0 +1,65 @@
+{
+    "title": "Einfaches Kontaktformular mit Bild rechts",
+    "identifier": "SmugSimpleContactFormImageRight",
+    "type": "plugin",
+    "category": "Forms",
+    "description": {
+        "de": "Plugin zur Darstellung eines einfachen Kontaktformulars mit Bild auf der rechten Seite",
+        "en": "Plugin for displaying a simple contact form with an image on the right"
+    },
+    "settings": {
+        "plugin": {
+            "fields": [
+                {
+                    "placeholder": "API_SELECTION",
+                    "identifier": "apiEndpoint",
+                    "default": "",
+                    "type": "ApiSelection"
+                }
+            ]
+        },
+        "template": {
+            "frontend": {
+                "templatePath": "@SmugContact/frontend/modules/SimpleContactFormImageRight/index.html.twig"
+            }
+        },
+        "scripts": [
+            "simpleContactForm"
+        ],
+        "fields": [
+            {
+                "identifier": "headline",
+                "placeholder": "HEADLINE",
+                "default": "Welcome to Our Awesome Website",
+                "type": "Text",
+                "classes": ["text-5xl", "font-bold", "leading-tight", "mb-4"],
+                "config": {
+                    "valueType": "string",
+                    "contentEditable": true
+                }
+            },
+            {
+                "identifier": "caption",
+                "placeholder": "CAPTION",
+                "default": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, molestiae! Quidem est esse numquam odio deleniti, beatae, magni dolores provident quaerat totam eos, aperiam architecto eius quis quibusdam fugiat dicta.",
+                "type": "Editor",
+                "classes": ["text-gray-600", "text-left", "transition-colors", "font-medium", "text-md", "mb-8", "px-3", "md:px-0"],
+                "config": {
+                    "valueType": "string",
+                    "contentEditable": true
+                }
+            },
+            {
+                "identifier": "image",
+                "placeholder": "IMAGE",
+                "type": "FileUpload",
+                "classes": ["transition-all", "lazy", "shadow-md", "group-hover:shadow-2xl", "h-full", "w-full", "rounded-md", "background"],
+                "config": {
+                    "multiple": false,
+                    "valueType": "file",
+                    "contentEditable": false
+                }
+            }
+        ]
+    }
+}
